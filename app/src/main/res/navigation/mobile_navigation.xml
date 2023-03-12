@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/sign_in_user">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.example.onlineshop.home.HomeFragment"
+        android:label="@string/title_home"
+        tools:layout="@layout/fragment_home" >
+        <action
+            android:id="@+id/action_navigation_home_to_navigation_detail_product"
+            app:destination="@id/navigation_detail_product" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/navigation_detail_product"
+        android:name="com.example.onlineshop.detail.ui.DetailProductFragment"
+        android:label="Product"
+        tools:layout="@layout/fragment_detail_product" >
+        <action
+            android:id="@+id/action_navigation_detail_product_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_user"
+        android:name="com.example.onlineshop.profile.ProfileFragment"
+        android:label="Profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_navigation_profile_user_to_sign_in_user"
+            app:destination="@id/sign_in_user" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/sign_in_user"
+        android:name="com.example.onlineshop.signin.ui.SignInFragment"
+        android:label="fragment_sing_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_sign_in_user_to_login_user"
+            app:destination="@id/login_user" />
+        <action
+            android:id="@+id/action_sign_in_user_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+    <fragment
+        android:id="@+id/login_user"
+        android:name="com.example.onlineshop.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_user_to_navigation_home"
+            app:destination="@id/navigation_home" />
+    </fragment>
+</navigation>

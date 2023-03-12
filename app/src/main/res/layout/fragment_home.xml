@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".home.HomeFragment">
+
+    <ImageButton
+        android:id="@+id/hamburgerImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="23dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginBottom="13dp"
+        android:background="@color/white"
+        android:src="@drawable/ic_hamburger"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/tradeByTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="49dp"
+        android:text="Trade by"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:fontFamily="@font/montserrat_bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/bataTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="49dp"
+        android:text="bata"
+        android:textColor="@color/purple_850"
+        android:textSize="20sp"
+        app:fontFamily="@font/montserrat_bold"
+        app:layout_constraintStart_toEndOf="@+id/tradeByTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/avatarImageView"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="52dp"
+        android:layout_marginTop="51dp"
+        android:layout_marginEnd="47dp"
+        android:background="@color/white"
+        android:src="@drawable/user_avatar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/bataTextView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="7dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="@+id/avatarImageView"
+        app:layout_constraintStart_toStartOf="@+id/avatarImageView"
+        app:layout_constraintTop_toBottomOf="@+id/avatarImageView">
+
+        <TextView
+            android:id="@+id/locationTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Location"
+            android:textColor="@color/gray_300"
+            android:textSize="10sp"
+            app:fontFamily="@font/poppins" />
+
+        <ImageButton
+            android:id="@+id/downImageButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="2dp"
+            android:layout_marginBottom="1dp"
+            android:background="@color/white"
+            android:src="@drawable/ic_down" />
+    </LinearLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/lookingForTextInputLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="56dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginEnd="57dp"
+        app:boxBackgroundColor="@color/white_overlay_200"
+        app:boxCornerRadiusBottomEnd="12dp"
+        app:boxCornerRadiusBottomStart="12dp"
+        app:boxCornerRadiusTopEnd="12dp"
+        app:boxCornerRadiusTopStart="12dp"
+        app:boxStrokeColor="@color/gray_200"
+        app:boxStrokeWidth="0dp"
+        app:fontFamily="@font/montserrat_semibold"
+        app:hintEnabled="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tradeByTextView">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/lastNameEditText"
+            android:layout_width="match_parent"
+            android:layout_height="24dp"
+            android:drawableRight="@drawable/ic_find"
+            android:gravity="center"
+            android:hint="What are you looking for ?"
+            android:padding="0dp"
+            android:textColorHint="@color/gray_400"
+            android:textSize="9sp"
+            app:fontFamily="@font/poppins"
+            app:hintAnimationEnabled="false" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/categoryRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="17dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/lookingForTextInputLayout"
+        tools:listitem="@layout/item_category">
+    </androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/latestTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="29dp"
+        android:text="Latest"
+        android:includeFontPadding="false"
+        android:textColor="@color/black_overlay_100"
+        android:textSize="20sp"
+        app:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@+id/categoryRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/viewAllLatestTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="15dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="14dp"
+        android:text="View all"
+        android:textColor="@color/gray_500"
+        android:textSize="9sp"
+        app:fontFamily="@font/poppins_medium"
+        app:layout_constraintBottom_toTopOf="@+id/latestRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/latestRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/latestTextView"
+        tools:listitem="@layout/item_latest"></androidx.recyclerview.widget.RecyclerView>
+    <TextView
+        android:id="@+id/flashSaleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="17dp"
+        android:text="Flash Sale"
+        android:includeFontPadding="false"
+        android:textColor="@color/black_overlay_100"
+        android:textSize="20sp"
+        app:fontFamily="@font/poppins_medium"
+        app:layout_constraintTop_toBottomOf="@+id/latestRecyclerView"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/viewAllFlashSaleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="9dp"
+        android:text="View all"
+        android:textColor="@color/gray_500"
+        android:textSize="9sp"
+        app:fontFamily="@font/poppins_medium"
+        app:layout_constraintBottom_toTopOf="@+id/flashSaleRecyclerView"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/flashSaleRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:orientation="horizontal"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/flashSaleTextView"
+        tools:listitem="@layout/item_flash_sale" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/bg_circle.xml" value="0.1745" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/circle_20.xml" value="0.332" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/circle_25.xml" value="0.332" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/circle_28_white.xml" value="0.2485" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/circle_35.xml" value="0.2485" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/circle_40.xml" value="0.312" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_add1.xml" value="0.332" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_baseline_adjust_24.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_hamburger.xml" value="0.261" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_home.xml" value="0.339" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_home_17.xml" value="0.339" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_home_black_24dp.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_left.xml" value="0.313" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_like.xml" value="0.2485" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_like_15_13.xml" value="0.313" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/ic_vector_1.xml" value="0.339" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/nav_background_curved.xml" value="0.25" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner.xml" value="0.194" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_blue_350_r8.xml" value="0.2555" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_gray_350.xml" value="0.2485" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_gray_350_r5.xml" value="0.313" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_gray_350_r8.xml" value="0.2485" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_gray_360_r9.xml" value="0.348" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_gray_380_r14.xml" value="0.312" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_gray_550.xml" value="0.332" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_purple_800_r15.xml" value="0.224" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/drawable/rounded_corner_purple_800_r8.xml" value="0.224" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/activity_main.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_dashboard.xml" value="0.5" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_detail.xml" value="0.33" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_detail_product.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_home.xml" value="0.3935018050541516" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_login.xml" value="0.264" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_notifications.xml" value="0.22" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_profile.xml" value="0.24444444444444444" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_sign_in.xml" value="0.38235294117647056" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/fragment_sing_in.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/item_category.xml" value="0.75" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/item_color_product_detail.xml" value="0.3614583333333333" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/item_flash_sale.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/item_latest.xml" value="0.1" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/layout/item_product_image.xml" value="0.30885416666666665" />
+        <entry key="..\:/Users/Adminius/AndroidStudioProjects/OnlineShop/app/src/main/res/menu/bottom_nav_menu.xml" value="0.35208333333333336" />
+      </map>
+    </option>
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="Android Studio default JDK" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>

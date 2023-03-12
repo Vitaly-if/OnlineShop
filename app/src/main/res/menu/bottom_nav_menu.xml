@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/navigation_home"
+        android:icon="@drawable/ic_home"
+        android:title="@string/title_home"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:icon="@drawable/ic_like"
+        android:title="title_like" />
+
+    <item
+        android:icon="@drawable/ic_basket_18"
+        android:title="title_basket" />
+
+    <item
+        android:icon="@drawable/ic_message"
+        android:title="title_message" />
+
+    <item
+        android:id="@+id/profile_user"
+        android:icon="@drawable/ic_user"
+        android:title="profile_user" />
+
+</menu>

@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.example.onlineshop.signin.MyCardView
+        android:id="@+id/flashSaleContainerCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        app:cardCornerRadius="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.onlineshop.signin.MyImageView
+            android:id="@+id/flashSaleImageView"
+            android:layout_width="174dp"
+            android:layout_height="221dp"
+            android:scaleType="centerCrop"
+            tools:background="@drawable/flash_sale_background_img" />
+
+
+    </com.example.onlineshop.signin.MyCardView>
+
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/discountTextView"
+        android:layout_width="49dp"
+        android:layout_height="18dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/rounded_corner"
+        android:elevation="2dp"
+        android:paddingTop="1dp"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:fontFamily="@font/poppins_medium"
+        app:layout_constraintEnd_toEndOf="@+id/flashSaleContainerCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="30% off" />
+
+
+    <ImageView
+        android:layout_width="25dp"
+        android:layout_height="25dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="7dp"
+        android:elevation="1dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/flash_sale_card_avatar_img" />
+
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/nameCategoryFlashSaleTextView"
+        android:layout_width="49dp"
+        android:layout_height="17dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="123dp"
+        android:background="@drawable/rounded_corner_gray_350_r8"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:paddingTop="1dp"
+        android:textColor="@color/black_200"
+        android:textSize="9sp"
+        app:fontFamily="@font/poppins_semibold"
+        app:layout_constraintStart_toStartOf="@+id/flashSaleContainerCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Kids" />
+
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/nameFlashSaleTextView"
+        android:layout_width="87dp"
+        android:layout_height="36dp"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="144dp"
+        android:elevation="2dp"
+        android:gravity="top"
+        android:textColor="@color/white"
+        android:textSize="13sp"
+        app:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="@+id/flashSaleContainerCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="New balance sneakers" />
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/priceFlashSaleTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="12dp"
+        android:elevation="2dp"
+        android:gravity="top"
+        android:textColor="@color/white"
+        android:textSize="10sp"
+        app:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameFlashSaleTextView"
+        tools:text="$ 33,00" />
+
+    <com.example.onlineshop.signin.MyImageButton
+        android:id="@+id/addToBasketFlashSaleImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="7dp"
+        android:background="@drawable/circle_35"
+        android:elevation="1dp"
+        android:src="@drawable/ic_add_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <ImageButton
+        android:id="@+id/likeFlashSaleImageButton"
+        android:layout_width="28dp"
+        android:layout_height="28dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/circle_35"
+        android:elevation="1dp"
+        android:src="@drawable/ic_like_15_13"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/addToBasketFlashSaleImageButton" />
+</androidx.constraintlayout.widget.ConstraintLayout>

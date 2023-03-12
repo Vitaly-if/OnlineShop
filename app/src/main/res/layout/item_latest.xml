@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="15dp"
+    android:gravity="center_vertical"
+    android:orientation="vertical">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/materialCardView"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:elevation="1dp"
+        app:cardCornerRadius="9dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.onlineshop.signin.MyImageView
+            android:id="@+id/latestImageView"
+            android:layout_width="114dp"
+            android:layout_height="149dp"
+            android:scaleType="centerCrop"
+            tools:background="@drawable/latest_card_background_img" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/nameCategoryLatestTextView"
+        android:layout_width="35dp"
+        android:layout_height="12dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="91dp"
+        android:background="@drawable/rounded_corner_gray_350_r5"
+        android:elevation="2dp"
+        android:gravity="center"
+        android:textColor="@color/black_200"
+        android:textSize="6sp"
+        app:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Phones" />
+
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/nameLatestTextView"
+        android:layout_width="75dp"
+        android:layout_height="26dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="106dp"
+        android:elevation="2dp"
+        android:gravity="top"
+        android:textColor="@color/white"
+        android:textSize="9sp"
+        app:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="@+id/materialCardView"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="Samsung S10" />
+
+    <com.example.onlineshop.signin.MyTextView
+        android:id="@+id/priceLatestTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="1dp"
+        android:elevation="2dp"
+        android:gravity="top"
+        android:textColor="@color/white"
+        android:textSize="7sp"
+        app:fontFamily="@font/montserrat_semibold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/nameLatestTextView"
+        tools:text="$ 180,000" />
+
+    <com.example.onlineshop.signin.MyImageButton
+        android:id="@+id/addToBasketLatestImageButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/circle_20"
+        android:elevation="1dp"
+        android:src="@drawable/ic_add_7"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
