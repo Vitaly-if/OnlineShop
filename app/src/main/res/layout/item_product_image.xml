@@ -5,23 +5,26 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginStart="15dp"
-    android:gravity="center_vertical"
-    android:orientation="vertical">
+    android:layout_marginBottom="0dp"
+    android:layout_gravity="bottom">
+    >
 
     <com.google.android.material.card.MaterialCardView
         android:id="@+id/materialCardView"
         android:layout_width="wrap_content"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         app:cardCornerRadius="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:background="@drawable/img_item_detail" />
+        <com.example.onlineshop.signin.MyImageView
+            android:id="@+id/itemProductImageView"
+            android:layout_width="66dp"
+            android:layout_height="38dp"
+            android:scaleType="centerCrop"
+            tools:background="@drawable/img_item_detail" />
 
     </com.google.android.material.card.MaterialCardView>
 
