@@ -8,4 +8,7 @@
     <string name="empty_string_error_message">Поле не должно быть пустым</string>
     <string name="invalid_email_error_message">Введен некорректный email</string>
     <string name="invalid_min_length_error_message">Несоответствует минимальному количеству символов</string>
+    <string name="colorNameTitle">Color:</string>
+    <string name="quantityTitle">Quantity</string>
+    <string name="add_to_cart">ADD TO CART</string>
 </resources>
