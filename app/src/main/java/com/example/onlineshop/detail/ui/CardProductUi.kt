@@ -17,7 +17,18 @@ class CardProductUi (
         colors: List<String>,
         imageUrls: List<String>
     ) {
-        TODO("Not yet implemented")
+        binding.apply {
+            nameProductTextView.text = name
+            productImage.loadImage(imageUrls[1])
+            descriptionProductTextView.text = description
+            priceProductTextView.text = "$ $price"
+            ratingProductTextView.text = rating.toString()
+            reviewsProductTextView.text = "($numberReviews reviews)"
+            totalProductTextView.text = "# $price"
+
+        }
+
+
     }
 
 }

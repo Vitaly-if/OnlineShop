@@ -11,8 +11,8 @@ class ProductDetailUi(
     private val numberReviews: Int,
     private val price: Float,
     private val colors: List<String>,
-    private val imageUrls: List<String>
-) {
+    private val imageUrls: List<String>,
+) : FetshList {
     fun <T> map(mapper: Mapper<T>): T = mapper.map(
         name,
         description,
@@ -22,7 +22,6 @@ class ProductDetailUi(
         colors,
         imageUrls
     )
-
     interface Mapper<T> {
 
         fun map(
@@ -32,8 +31,14 @@ class ProductDetailUi(
             numberReviews: Int,
             price: Float,
             colors: List<String>,
-            imageUrls: List<String>
+            imageUrls: List<String>,
         ): T
     }
+    override fun colors() = colors
 
-    }
+    override fun images() = imageUrls
+}
+interface FetshList {
+    fun colors(): List<String>
+    fun images(): List<String>
+}

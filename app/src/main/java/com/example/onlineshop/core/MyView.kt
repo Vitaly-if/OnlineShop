@@ -21,4 +21,8 @@ interface MyView {
     fun check(checked: Boolean) = Unit
 
     fun handleClick(listener: View.OnClickListener) = Unit
+
+    fun loadBackground(color: String) = Unit
+
+    fun increase() = Unit
 }

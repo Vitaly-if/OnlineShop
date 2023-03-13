@@ -17,10 +17,9 @@ data class ProductDetailDTO(
     @SerializedName("price")
     private val price: Float,
     @SerializedName("colors")
-private val colors: List<String>,
-
-@SerializedName("image_urls")
-private val imageUrls: List<String>
+    private val colors: List<String>,
+    @SerializedName("image_urls")
+    private val imageUrls: List<String>,
 ) {
     interface Mapper<T> {
         fun map(
@@ -30,7 +29,7 @@ private val imageUrls: List<String>
             numberReviews: Int,
             price: Float,
             colors: List<String>,
-            imageUrls: List<String>
+            imageUrls: List<String>,
         ): T
     }
 

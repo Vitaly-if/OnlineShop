@@ -1,7 +1,12 @@
 package com.example.onlineshop.signin
 
 import android.content.Context
+import android.content.res.ColorStateList
+import android.content.res.Resources
+import android.graphics.Color
 import android.util.AttributeSet
+import android.util.Log
+import androidx.core.view.updatePadding
 import com.example.onlineshop.core.MyView
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -95,6 +100,7 @@ class MyImageButton : androidx.appcompat.widget.AppCompatImageButton, MyView {
     override fun showImageResource(id: Int) {
         setImageResource(id)
     }
+
 }
 
 class MyImageView : androidx.appcompat.widget.AppCompatImageView, MyView {
@@ -111,9 +117,15 @@ class MyImageView : androidx.appcompat.widget.AppCompatImageView, MyView {
         Picasso.get().load(url).into(this)
     }
 
+    override fun increase() {
+        val density = Resources.getSystem().displayMetrics.density
+        layoutParams.height = 65 * density.toInt()
+        layoutParams.width = 123 * density.toInt()
+    }
     override fun showImageResource(id: Int) {
         setImageResource(id)
     }
+
 }
 
 class MyCardView : com.google.android.material.card.MaterialCardView, MyView {
@@ -125,7 +137,31 @@ class MyCardView : com.google.android.material.card.MaterialCardView, MyView {
         attrs,
         defStyleAttr
     )
+
     override fun handleClick(listener: OnClickListener) {
         setOnClickListener(listener)
+    }
+}
+
+class MyButton : androidx.appcompat.widget.AppCompatButton, MyView {
+
+    constructor(context: Context) : super(context)
+    constructor(context: Context, attrs: AttributeSet?) : super(context, attrs)
+    constructor(context: Context, attrs: AttributeSet?, defStyleAttr: Int) : super(
+        context,
+        attrs,
+        defStyleAttr
+    )
+
+    override fun enable(enabled: Boolean) {
+        isEnabled = enabled
+    }
+
+    override fun handleClick(listener: OnClickListener) {
+        setOnClickListener(listener)
+    }
+
+    override fun loadBackground(color: String) {
+        backgroundTintList = ColorStateList.valueOf(Color.parseColor(color))
     }
 }

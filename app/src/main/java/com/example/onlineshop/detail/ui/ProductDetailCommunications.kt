@@ -9,8 +9,6 @@ import com.example.onlineshop.core.Communication
  */
 interface ProductDetailCommunications : ObserveProductDetail {
 
-    fun showState(uiState: ProductDetailUiState)
-
     fun showListImage(images: List<String>)
 
     fun showListColor(colors: List<String>)
@@ -18,46 +16,40 @@ interface ProductDetailCommunications : ObserveProductDetail {
     fun showCard(source: ProductDetailUi)
 
     class Base(
-        private val state: ProductDetailStateCommunication,
         private val imagesList: ImagesProductListCommunication,
         private val colorsList: ColorsProductListCommunication,
-        private val productDetail: ProductDetailUiCommunication
+        private val productDetail: ProductDetailUiCommunication,
     ) : ProductDetailCommunications {
-
-        override fun showState(uiState: ProductDetailUiState) = state.map(uiState)
-
         override fun showListImage(images: List<String>) = imagesList.map(images)
 
         override fun showListColor(colors: List<String>) = colorsList.map(colors)
 
         override fun showCard(source: ProductDetailUi) = productDetail.map(source)
 
-        override fun observeState(owner: LifecycleOwner, observer: Observer<ProductDetailUiState>) =
-            state.observe(owner, observer)
-
         override fun observeImageList(owner: LifecycleOwner, observer: Observer<List<String>>) =
             imagesList.observe(owner, observer)
 
         override fun observeColorList(owner: LifecycleOwner, observer: Observer<List<String>>) =
             colorsList.observe(owner, observer)
+
+        override fun observeProductDetailUi(
+            owner: LifecycleOwner,
+            observer: Observer<ProductDetailUi>,
+        ) {
+            productDetail.observe(owner, observer)
+        }
     }
 }
 
 interface ObserveProductDetail {
 
-    fun observeState(owner: LifecycleOwner, observer: Observer<ProductDetailUiState>)
-
     fun observeImageList(owner: LifecycleOwner, observer: Observer<List<String>>)
-
     fun observeColorList(owner: LifecycleOwner, observer: Observer<List<String>>)
+    fun observeProductDetailUi(owner: LifecycleOwner, observer: Observer<ProductDetailUi>)
 }
 
 interface ProductDetailUiCommunication : Communication.Mutable<ProductDetailUi> {
     class Base : Communication.Ui<ProductDetailUi>(), ProductDetailUiCommunication
-}
-
-interface ProductDetailStateCommunication : Communication.Mutable<ProductDetailUiState> {
-    class Base : Communication.Ui<ProductDetailUiState>(), ProductDetailStateCommunication
 }
 
 interface ImagesProductListCommunication : Communication.Mutable<List<String>> {

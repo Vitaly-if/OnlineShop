@@ -10,6 +10,7 @@ import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.onlineshop.databinding.FragmentDetailProductBinding
 import com.example.onlineshop.detail.ui.adapter.ClickListener
+import com.example.onlineshop.detail.ui.adapter.ColorsAdapter
 import com.example.onlineshop.detail.ui.adapter.ImagesAdapter
 import com.example.onlineshop.di.App
 import javax.inject.Inject
@@ -42,20 +43,26 @@ class DetailProductFragment : Fragment() {
 
         val mapper = CardProductUi(binding)
         val recyclerViewImage = binding.productImagesRecyclerView
+        val recyclerColors = binding.colorProductImagesRecyclerView
 
         val adapterImages = ImagesAdapter(object : ClickListener {
             override fun click(item: String) {
-                Log.i("vital", "click image")
+                Log.i("vital", "click image $item")
+            }
+        })
+        val adapterColors= ColorsAdapter(object : ClickListener {
+            override fun click(item: String) {
+                Log.i("vital", "click color $item")
             }
         })
         recyclerViewImage.adapter = adapterImages
-        adapterImages.map(
-            listOf(
-                "https://assets.reebok.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/3613ebaf6ed24a609818ac63000250a3_9366/Classic_Leather_Shoes_-_Toddler_White_FZ2093_01_standard.jpg",
-                "https://assets.reebok.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/a94fbe7d8dfb4d3bbaf9ac63000135ed_9366/Classic_Leather_Shoes_-_Toddler_White_FZ2093_03_standard.jpg",
-                "https://assets.reebok.com/images/h_2000,f_auto,q_auto,fl_lossy,c_fill,g_auto/1fd1b80693d34f2584b0ac6300034598_9366/Classic_Leather_Shoes_-_Toddler_White_FZ2093_05_standard.jpg"
-            )
-        )
+        recyclerColors.adapter = adapterColors
+
+        viewModel.observeProductDetailUi(this) {
+            it.map(mapper)
+            adapterImages.map(it.images())
+            adapterColors.map(it.colors())
+        }
         binding.toBackImageButton.setOnClickListener {
             this.findNavController().navigateUp()
         }
