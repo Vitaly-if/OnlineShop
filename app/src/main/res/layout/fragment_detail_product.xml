@@ -3,8 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".home.HomeFragment">
+    android:layout_height="match_parent">
 
     <ImageButton
         android:id="@+id/toBackImageButton"
@@ -21,24 +20,24 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
-<com.google.android.material.card.MaterialCardView
-    android:id="@+id/productImageCardView"
-    android:layout_width="328dp"
-    android:layout_height="279dp"
-    app:cardCornerRadius="9dp"
-    app:layout_constraintStart_toStartOf="parent"
-    app:layout_constraintTop_toTopOf="parent"
-    android:layout_marginStart="-5dp"
-    android:layout_marginTop="40dp">
 
-    <com.example.onlineshop.signin.MyImageView
-        android:id="@+id/productImage"
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/productImageCardView"
         android:layout_width="328dp"
         android:layout_height="279dp"
-        android:scaleType="centerCrop"
-        tools:background="@drawable/flash_sale_detail_img"
- />
-</com.google.android.material.card.MaterialCardView>
+        android:layout_marginStart="-5dp"
+        android:layout_marginTop="40dp"
+        app:cardCornerRadius="9dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.example.onlineshop.signin.MyImageView
+            android:id="@+id/productImage"
+            android:layout_width="328dp"
+            android:layout_height="279dp"
+            android:scaleType="centerCrop"
+            tools:background="@drawable/flash_sale_detail_img" />
+    </com.google.android.material.card.MaterialCardView>
 
 
     <LinearLayout
@@ -47,8 +46,8 @@
         android:layout_marginStart="304dp"
         android:layout_marginTop="156dp"
         android:background="@drawable/rounded_corner_gray_380_r14"
-        android:orientation="vertical"
         android:elevation="2dp"
+        android:orientation="vertical"
         app:layout_constraintStart_toStartOf="@+id/productImageCardView"
         app:layout_constraintTop_toTopOf="@+id/productImageCardView">
 
@@ -80,15 +79,16 @@
     <LinearLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal"
         android:layout_marginStart="76dp"
         android:layout_marginTop="41dp"
         android:layout_marginEnd="76dp"
+        android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/productImageCardView"
         app:layout_constraintTop_toBottomOf="@+id/productImageCardView"
         app:layout_constraintVertical_bias="0.0">
+
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/productImagesRecyclerView"
             android:layout_width="match_parent"
@@ -152,7 +152,7 @@
             android:id="@+id/starImageButton"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="right"
+            android:layout_gravity="end"
             android:background="@null"
             android:src="@drawable/ic_star" />
 
@@ -183,7 +183,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="14dp"
-        android:text="Color:"
+        android:text="@string/colorNameTitle"
         android:textColor="@color/gray_450"
         android:textSize="10sp"
         app:fontFamily="@font/poppins_semibold"
@@ -227,8 +227,8 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
         android:layout_marginTop="14dp"
-        android:text="Quantity"
         android:elevation="1dp"
+        android:text="@string/quantityTitle"
         android:textColor="@color/gray_450"
         android:textSize="10sp"
         app:fontFamily="@font/poppins_semibold"
@@ -278,10 +278,10 @@
             android:layout_height="match_parent"
             android:layout_marginStart="28dp"
             android:gravity="center"
-            tools:text="#2,500"
             android:textColor="@color/purple_250"
             android:textSize="8sp"
-            app:fontFamily="@font/poppins_semibold" />
+            app:fontFamily="@font/poppins_semibold"
+            tools:text="#2,500" />
 
         <TextView
             android:id="@+id/addToCardProductTextView"
@@ -289,12 +289,11 @@
             android:layout_height="match_parent"
             android:layout_marginStart="30dp"
             android:gravity="center"
-            android:text="ADD TO CART"
+            android:text="@string/add_to_cart"
             android:textColor="@color/white"
             android:textSize="8sp"
             app:fontFamily="@font/poppins_semibold" />
 
     </LinearLayout>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
