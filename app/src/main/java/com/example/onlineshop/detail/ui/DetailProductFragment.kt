@@ -2,12 +2,12 @@ package com.example.onlineshop.detail.ui
 
 import android.content.Context
 import android.os.Bundle
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import com.example.onlineshop.R
 import com.example.onlineshop.databinding.FragmentDetailProductBinding
 import com.example.onlineshop.detail.ui.adapter.ClickListener
 import com.example.onlineshop.detail.ui.adapter.ColorsAdapter
@@ -27,36 +27,29 @@ class DetailProductFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?,
-    ): View? {
+    ): View {
         _binding = FragmentDetailProductBinding.inflate(inflater, container, false)
-        val root: View = binding.root
-        return root
+        return binding.root
     }
-
     override fun onAttach(context: Context) {
         super.onAttach(context)
         (requireActivity().application as App).appComponent.inject(this)
     }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         val mapper = CardProductUi(binding)
-        val recyclerViewImage = binding.productImagesRecyclerView
-        val recyclerColors = binding.colorProductImagesRecyclerView
 
         val adapterImages = ImagesAdapter(object : ClickListener {
             override fun click(item: String) {
-                Log.i("vital", "click image $item")
             }
         })
-        val adapterColors= ColorsAdapter(object : ClickListener {
+        val adapterColors = ColorsAdapter(object : ClickListener {
             override fun click(item: String) {
-                Log.i("vital", "click color $item")
             }
         })
-        recyclerViewImage.adapter = adapterImages
-        recyclerColors.adapter = adapterColors
+        binding.productImagesRecyclerView.adapter = adapterImages
+        binding.colorProductImagesRecyclerView.adapter = adapterColors
 
         viewModel.observeProductDetailUi(this) {
             it.map(mapper)
@@ -64,8 +57,12 @@ class DetailProductFragment : Fragment() {
             adapterColors.map(it.colors())
         }
         binding.toBackImageButton.setOnClickListener {
-            this.findNavController().navigateUp()
+            this.findNavController()
+                .navigate(R.id.action_navigation_detail_product_to_navigation_home)
         }
     }
-
+    override fun onDestroy() {
+        super.onDestroy()
+        _binding = null
+    }
 }
