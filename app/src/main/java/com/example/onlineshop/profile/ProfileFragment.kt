@@ -14,8 +14,6 @@ class ProfileFragment : Fragment() {
 
     private var _binding: FragmentProfileBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
     private val binding get() = _binding!!
 
     override fun onCreateView(
@@ -34,7 +32,6 @@ class ProfileFragment : Fragment() {
         binding.logOutImageButton.setOnClickListener {
             Navigation.findNavController(view).navigate(R.id.action_navigation_profile_user_to_sign_in_user)
         } }
-
 
     override fun onDestroyView() {
         super.onDestroyView()
