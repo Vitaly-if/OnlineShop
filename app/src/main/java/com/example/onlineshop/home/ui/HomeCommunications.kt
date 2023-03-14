@@ -2,7 +2,7 @@ package com.example.onlineshop.home.ui
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.example.onlineshop.core.Communication
+import com.example.core.presenter.Communication
 
 /**
  * @author Vitaly.N on 10.03.2023.
@@ -33,9 +33,9 @@ interface ObserveHome {
     fun observeLatestList(owner: LifecycleOwner, observer: Observer<List<LatestUi>>)
     fun observeFlashSaleList(owner: LifecycleOwner, observer: Observer<List<FlashSaleUi>>)
 }
-interface LatestListCommunication : Communication.Mutable<List<LatestUi>> {
-    class Base : Communication.Post<List<LatestUi>>(), LatestListCommunication
+interface LatestListCommunication : com.example.core.presenter.Communication.Mutable<List<LatestUi>> {
+    class Base : com.example.core.presenter.Communication.Post<List<LatestUi>>(), LatestListCommunication
 }
-interface FlashSaleListCommunication : Communication.Mutable<List<FlashSaleUi>> {
-    class Base : Communication.Post<List<FlashSaleUi>>(), FlashSaleListCommunication
+interface FlashSaleListCommunication : com.example.core.presenter.Communication.Mutable<List<FlashSaleUi>> {
+    class Base : com.example.core.presenter.Communication.Post<List<FlashSaleUi>>(), FlashSaleListCommunication
 }

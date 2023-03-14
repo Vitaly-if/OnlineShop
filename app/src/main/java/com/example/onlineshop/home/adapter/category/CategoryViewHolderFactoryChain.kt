@@ -3,9 +3,9 @@ package com.example.onlineshop.home.adapter.category
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import com.example.onlineshop.R
-import com.example.onlineshop.core.ItemUi
-import com.example.onlineshop.core.presenter.adapter.GenericViewHolder
-import com.example.onlineshop.core.presenter.adapter.ViewHolderFactoryChain
+import com.example.core.presenter.ItemUi
+import com.example.core.adapter.GenericViewHolder
+import com.example.core.adapter.ViewHolderFactoryChain
 
 /**
  * @author Vitaly.N on 08.03.2023.

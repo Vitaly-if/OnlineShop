@@ -1,5 +1,6 @@
 package com.example.onlineshop.di
 
+import android.app.Application
 import android.content.Context
 import com.example.onlineshop.signin.data.cache.LoginCacheModule
 import com.example.onlineshop.signin.data.cache.LoginDataBase

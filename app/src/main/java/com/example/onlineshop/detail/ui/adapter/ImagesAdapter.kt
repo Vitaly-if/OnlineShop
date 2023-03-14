@@ -3,18 +3,17 @@ package com.example.onlineshop.detail.ui.adapter
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.core.view.updatePadding
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
-import com.example.onlineshop.core.Mapper
-import com.example.onlineshop.signin.MyImageView
+import com.example.core.presenter.Mapper
+import com.example.core.presenter.MyImageView
 
 /**
  * @author Vitaly.N on 12.03.2023.
  */
 class ImagesAdapter(private val clickListener: ClickListener) :
-    RecyclerView.Adapter<ImageViewHolder>(), Mapper.Unit<List<String>> {
+    RecyclerView.Adapter<ImageViewHolder>(), com.example.core.presenter.Mapper.Unit<List<String>> {
 
     private val list = mutableListOf<String>()
 
@@ -40,7 +39,7 @@ class ImagesAdapter(private val clickListener: ClickListener) :
 class ImageViewHolder(view: View, private val clickListener: ClickListener) :
     RecyclerView.ViewHolder(view) {
     private val view = view
-    private val image = itemView.findViewById<MyImageView>(R.id.itemProductImageView)
+    private val image = itemView.findViewById<com.example.core.presenter.MyImageView>(R.id.itemProductImageView)
 
     fun bind(model: String, position: Int) {
         image.loadImage(model)

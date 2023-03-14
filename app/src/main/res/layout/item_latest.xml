@@ -19,7 +19,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.onlineshop.signin.MyImageView
+        <com.example.core.presenter.MyImageView
             android:id="@+id/latestImageView"
             android:layout_width="114dp"
             android:layout_height="149dp"
@@ -28,7 +28,7 @@
 
     </com.google.android.material.card.MaterialCardView>
 
-    <com.example.onlineshop.signin.MyTextView
+    <com.example.core.presenter.MyTextView
         android:id="@+id/nameCategoryLatestTextView"
         android:layout_width="35dp"
         android:layout_height="12dp"
@@ -44,7 +44,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Phones" />
 
-    <com.example.onlineshop.signin.MyTextView
+    <com.example.core.presenter.MyTextView
         android:id="@+id/nameLatestTextView"
         android:layout_width="75dp"
         android:layout_height="26dp"
@@ -59,7 +59,7 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:text="Samsung S10" />
 
-    <com.example.onlineshop.signin.MyTextView
+    <com.example.core.presenter.MyTextView
         android:id="@+id/priceLatestTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
         app:layout_constraintTop_toBottomOf="@+id/nameLatestTextView"
         tools:text="$ 180,000" />
 
-    <com.example.onlineshop.signin.MyImageButton
+    <com.example.core.presenter.MyImageButton
         android:id="@+id/addToBasketLatestImageButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

@@ -1,14 +1,14 @@
 package com.example.onlineshop.home
 
-import com.example.onlineshop.core.Communication
+import com.example.core.presenter.Communication
 
 /**
  * @author Vitaly.N on 11.03.2023.
  */
 interface FlashSaleNavigation {
 
-    interface Observe : Communication.Observe<Int>
-    interface Update : Communication.Mutate<Int>
+    interface Observe : com.example.core.presenter.Communication.Observe<Int>
+    interface Update : com.example.core.presenter.Communication.Mutate<Int>
 
-    class Base : Communication.Ui<Int>(), Observe, Update
+    class Base : com.example.core.presenter.Communication.Ui<Int>(), Observe, Update
 }

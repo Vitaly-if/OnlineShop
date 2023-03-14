@@ -1,8 +1,8 @@
 package com.example.onlineshop.home.ui
 
 import android.util.Log
-import com.example.onlineshop.core.ItemUi
-import com.example.onlineshop.core.MyView
+import com.example.core.presenter.ItemUi
+import com.example.core.presenter.MyView
 
 /**
  * @author Vitaly.N on 10.03.2023.
@@ -13,10 +13,10 @@ class LatestUi(
     private val name: String,
     private val price: String,
     private val imageUrl: String,
-) : ItemUi {
+) : com.example.core.presenter.ItemUi {
     override fun type(): Int = 1
 
-    override fun show(vararg views: MyView) {
+    override fun show(vararg views: com.example.core.presenter.MyView) {
         views[0].show(name)
         views[1].show(category)
         views[2].show(price)

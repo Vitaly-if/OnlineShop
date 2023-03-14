@@ -1,7 +1,7 @@
 package com.example.onlineshop.home.adapter.latest
 
-import com.example.onlineshop.core.presenter.adapter.GenericAdapter
-import com.example.onlineshop.core.presenter.adapter.ViewHolderFactoryChain
+import com.example.core.adapter.GenericAdapter
+import com.example.core.adapter.ViewHolderFactoryChain
 
 /**
  * @author Vitaly.N on 10.03.2023.

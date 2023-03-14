@@ -7,10 +7,21 @@ import android.app.Application
  */
 open class App: Application() {
 
-    lateinit var appComponent: AppComponent
+    val appComponent: AppComponent by lazy {
+        DaggerAppComponent.builder()
+            .application(this)
+            .build()
+    }
 
     override fun onCreate() {
         super.onCreate()
-        appComponent = DaggerAppComponent.factory().create(this)
+        //ArticlesDepsStore.deps = appComponent
     }
+
+//    lateinit var appComponent: AppComponent
+//
+//    override fun onCreate() {
+//        super.onCreate()
+//        appComponent = DaggerAppComponent.factory().create(this)
+//    }
 }

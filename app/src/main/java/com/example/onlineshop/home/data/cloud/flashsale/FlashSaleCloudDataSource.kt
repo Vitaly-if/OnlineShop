@@ -1,7 +1,7 @@
 package com.example.onlineshop.home.data.cloud.flashsale
 
-import com.example.onlineshop.core.data.CloudDataSource
-import com.example.onlineshop.core.data.HandleError
+import com.example.core.CloudDataSource
+import com.example.core.domain.HandleError
 import com.example.onlineshop.home.data.FlashSaleData
 import com.google.gson.Gson
 import com.google.gson.reflect.TypeToken

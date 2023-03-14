@@ -1,10 +1,10 @@
 package com.example.onlineshop.di
 
 import com.example.onlineshop.BuildConfig
-import com.example.onlineshop.core.data.ProvideConverterFactory
-import com.example.onlineshop.core.data.ProvideInterceptor
-import com.example.onlineshop.core.data.ProvideOkHttpClientBuilder
-import com.example.onlineshop.core.data.ProvideRetrofitBuilder
+import com.example.core.data.ProvideConverterFactory
+import com.example.core.data.ProvideInterceptor
+import com.example.core.data.ProvideOkHttpClientBuilder
+import com.example.core.data.ProvideRetrofitBuilder
 import com.example.onlineshop.core.domain.HandleDomainError
 import com.example.onlineshop.home.data.cloud.flashsale.FlashSaleCloudDataSource
 import com.example.onlineshop.home.data.cloud.flashsale.FlashSaleDtoToDataMapper

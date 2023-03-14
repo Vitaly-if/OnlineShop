@@ -1,7 +1,7 @@
 package com.example.onlineshop.signin.ui
 
-import com.example.onlineshop.signin.CustomTextInputEditText
-import com.example.onlineshop.signin.CustomTextInputLayout
+import com.example.core.presenter.CustomTextInputEditText
+import com.example.core.presenter.CustomTextInputLayout
 
 /**
  * @author Vitaly.N on 04.03.2023.
@@ -9,15 +9,15 @@ import com.example.onlineshop.signin.CustomTextInputLayout
 sealed class UiState {
 
     abstract fun apply(
-        inputLayout: CustomTextInputLayout,
-        textInputEditText: CustomTextInputEditText,
+        inputLayout: com.example.core.presenter.CustomTextInputLayout,
+        textInputEditText: com.example.core.presenter.CustomTextInputEditText,
     )
 
     class Success : UiState() {
 
         override fun apply(
-            inputLayout: CustomTextInputLayout,
-            textInputEditText: CustomTextInputEditText,
+            inputLayout: com.example.core.presenter.CustomTextInputLayout,
+            textInputEditText: com.example.core.presenter.CustomTextInputEditText,
         ) = textInputEditText.showText("")
     }
 
@@ -27,8 +27,8 @@ sealed class UiState {
     ) : UiState() {
 
         override fun apply(
-            inputLayout: CustomTextInputLayout,
-            textInputEditText: CustomTextInputEditText,
+            inputLayout: com.example.core.presenter.CustomTextInputLayout,
+            textInputEditText: com.example.core.presenter.CustomTextInputEditText,
         ) = with(inputLayout) {
             changeErrorEnabled(errorEnabled)
             showError(message)

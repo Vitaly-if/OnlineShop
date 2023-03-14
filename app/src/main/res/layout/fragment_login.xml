@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.example.onlineshop.signin.BaseCustomTextInputLayout
+    <com.example.core.presenter.BaseCustomTextInputLayout
         android:id="@+id/firstNameLoginTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -47,7 +47,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/titleLoginTextView">
-        <com.example.onlineshop.signin.BaseCustomTextInputEditText
+        <com.example.core.presenter.BaseCustomTextInputEditText
             android:id="@+id/firstNameEditText"
             android:layout_width="match_parent"
             android:layout_height="29dp"
@@ -58,9 +58,9 @@
             android:textSize="11sp"
             app:fontFamily="@font/montserrat_medium"
             app:hintAnimationEnabled="false" />
-    </com.example.onlineshop.signin.BaseCustomTextInputLayout>
+    </com.example.core.presenter.BaseCustomTextInputLayout>
 
-    <com.example.onlineshop.signin.BaseCustomTextInputLayout
+    <com.example.core.presenter.BaseCustomTextInputLayout
         android:id="@+id/passwordTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -83,7 +83,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstNameLoginTextInputLayout">
 
-        <com.example.onlineshop.signin.BaseCustomTextInputEditText
+        <com.example.core.presenter.BaseCustomTextInputEditText
             android:id="@+id/passwordEditText"
             android:layout_width="match_parent"
             android:layout_height="29dp"
@@ -96,7 +96,7 @@
             android:textSize="11sp"
             app:fontFamily="@font/montserrat_medium"
             app:hintAnimationEnabled="false" />
-    </com.example.onlineshop.signin.BaseCustomTextInputLayout>
+    </com.example.core.presenter.BaseCustomTextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/loginButton"

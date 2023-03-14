@@ -6,15 +6,14 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import com.example.onlineshop.R
-import com.example.onlineshop.core.Mapper
-import com.example.onlineshop.signin.MyButton
-import com.example.onlineshop.signin.MyImageButton
+import com.example.core.presenter.Mapper
+import com.example.core.presenter.MyButton
 
 /**
  * @author Vitaly.N on 13.03.2023.
  */
 class ColorsAdapter(private val clickListener: ClickListener) :
-    RecyclerView.Adapter<ColorsViewHolder>(), Mapper.Unit<List<String>> {
+    RecyclerView.Adapter<ColorsViewHolder>(), com.example.core.presenter.Mapper.Unit<List<String>> {
 
     private val list = mutableListOf<String>()
 
@@ -40,7 +39,7 @@ class ColorsAdapter(private val clickListener: ClickListener) :
 class ColorsViewHolder(view: View, private val clickListener: ClickListener) :
     RecyclerView.ViewHolder(view) {
 
-    private val imageButton = itemView.findViewById<MyButton>(R.id.colorImageButton)
+    private val imageButton = itemView.findViewById<com.example.core.presenter.MyButton>(R.id.colorImageButton)
 
     fun bind(model: String) {
         imageButton.loadBackground(model)

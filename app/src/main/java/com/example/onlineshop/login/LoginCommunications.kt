@@ -2,7 +2,7 @@ package com.example.onlineshop.login
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.example.onlineshop.core.Communication
+import com.example.core.presenter.Communication
 import com.example.onlineshop.signin.ui.UiState
 
 /**
@@ -45,9 +45,9 @@ interface ObserveLogin {
     fun observeStatePassword(owner: LifecycleOwner, observer: Observer<UiState>)
 }
 
-interface LoginStateCommunication : Communication.Mutable<UiState> {
-    class Base : Communication.Ui<UiState>(), LoginStateCommunication
+interface LoginStateCommunication : com.example.core.presenter.Communication.Mutable<UiState> {
+    class Base : com.example.core.presenter.Communication.Ui<UiState>(), LoginStateCommunication
 }
-interface LoginSuccessCommunication: Communication.Mutable<Boolean> {
-    class Base : Communication.Ui<Boolean>(), LoginSuccessCommunication
+interface LoginSuccessCommunication: com.example.core.presenter.Communication.Mutable<Boolean> {
+    class Base : com.example.core.presenter.Communication.Ui<Boolean>(), LoginSuccessCommunication
 }

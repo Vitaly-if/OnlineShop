@@ -2,7 +2,7 @@ package com.example.onlineshop.detail.ui
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.example.onlineshop.core.Communication
+import com.example.core.presenter.Communication
 
 /**
  * @author Vitaly.N on 12.03.2023.
@@ -48,14 +48,14 @@ interface ObserveProductDetail {
     fun observeProductDetailUi(owner: LifecycleOwner, observer: Observer<ProductDetailUi>)
 }
 
-interface ProductDetailUiCommunication : Communication.Mutable<ProductDetailUi> {
-    class Base : Communication.Ui<ProductDetailUi>(), ProductDetailUiCommunication
+interface ProductDetailUiCommunication : com.example.core.presenter.Communication.Mutable<ProductDetailUi> {
+    class Base : com.example.core.presenter.Communication.Ui<ProductDetailUi>(), ProductDetailUiCommunication
 }
 
-interface ImagesProductListCommunication : Communication.Mutable<List<String>> {
-    class Base : Communication.Ui<List<String>>(), ImagesProductListCommunication
+interface ImagesProductListCommunication : com.example.core.presenter.Communication.Mutable<List<String>> {
+    class Base : com.example.core.presenter.Communication.Ui<List<String>>(), ImagesProductListCommunication
 }
 
-interface ColorsProductListCommunication : Communication.Mutable<List<String>> {
-    class Base : Communication.Ui<List<String>>(), ColorsProductListCommunication
+interface ColorsProductListCommunication : com.example.core.presenter.Communication.Mutable<List<String>> {
+    class Base : com.example.core.presenter.Communication.Ui<List<String>>(), ColorsProductListCommunication
 }

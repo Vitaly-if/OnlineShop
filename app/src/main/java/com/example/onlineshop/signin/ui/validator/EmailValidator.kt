@@ -1,12 +1,12 @@
 package com.example.onlineshop.signin.ui.validator
 
-import com.example.onlineshop.core.presenter.UiValidator
+import com.example.core.presenter.UiValidator
 
 /**
  * @author Vitaly.N on 06.03.2023.
  */
 class EmailValidator(private val errorMessage: String) :
-    UiValidator {
+    com.example.core.presenter.UiValidator {
 
     override fun errorMessage(): String {
         return errorMessage

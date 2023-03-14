@@ -4,7 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.onlineshop.core.presenter.UiValidator
+import com.example.core.presenter.UiValidator
 import com.example.onlineshop.login.LoginSuccessCommunication
 import com.example.onlineshop.signin.domain.LoginIteractor
 import com.example.onlineshop.signin.domain.LoginResult
@@ -18,8 +18,8 @@ import javax.inject.Named
  */
 class SignInViewModel @Inject constructor(
     private val iterator: LoginIteractor,
-    @Named("Email") private val validatorEmail: UiValidator,
-    @Named("Login") private val validatorLogin: UiValidator,
+    @Named("Email") private val validatorEmail: com.example.core.presenter.UiValidator,
+    @Named("Login") private val validatorLogin: com.example.core.presenter.UiValidator,
 ) : ViewModel(), ObserveSingIn, ClearError, SignIn {
 
     private val communicationsFirstName = SignInCommunications.Base(

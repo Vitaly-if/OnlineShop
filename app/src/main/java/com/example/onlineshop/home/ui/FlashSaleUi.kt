@@ -1,8 +1,8 @@
 package com.example.onlineshop.home.ui
 
 import android.util.Log
-import com.example.onlineshop.core.ItemUi
-import com.example.onlineshop.core.MyView
+import com.example.core.presenter.ItemUi
+import com.example.core.presenter.MyView
 import com.example.onlineshop.home.FlashSaleNavigation
 
 /**
@@ -16,10 +16,10 @@ class FlashSaleUi(
     private val discount: String,
     private val imageUrl: String,
     private val flashSaleNavigation: FlashSaleNavigation.Base
-) : ItemUi {
+) : com.example.core.presenter.ItemUi {
     override fun type(): Int = 1
 
-    override fun show(vararg views: MyView) {
+    override fun show(vararg views: com.example.core.presenter.MyView) {
         views[0].show(name)
         views[1].show(category)
         views[2].show(discount)

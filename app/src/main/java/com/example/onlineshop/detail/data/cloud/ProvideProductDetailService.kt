@@ -1,7 +1,7 @@
 package com.example.onlineshop.detail.data.cloud
 
-import com.example.onlineshop.core.data.MakeService
-import com.example.onlineshop.core.data.ProvideRetrofitBuilder
+import com.example.core.data.MakeService
+import com.example.core.data.ProvideRetrofitBuilder
 
 /**
  * @author Vitaly.N on 12.03.2023.

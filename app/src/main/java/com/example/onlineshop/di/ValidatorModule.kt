@@ -2,8 +2,8 @@ package com.example.onlineshop.di
 
 import android.content.Context
 import com.example.onlineshop.R
-import com.example.onlineshop.core.presenter.UiValidator
-import com.example.onlineshop.core.UiValidatorChain
+import com.example.core.presenter.UiValidator
+import com.example.core.presenter.UiValidatorChain
 import com.example.onlineshop.signin.ui.validator.EmailValidator
 import com.example.onlineshop.signin.ui.validator.EmptinessValidator
 import com.example.onlineshop.signin.ui.validator.MinLengthValidator
@@ -29,7 +29,9 @@ class ValidatorModule {
         return UiValidatorChain(
             EmailValidator(context.getString(R.string.invalid_email_error_message)),
             MinLengthValidator(
-                context.getString(R.string.empty_string_error_message), minLength))
+                context.getString(R.string.empty_string_error_message), minLength
+            )
+        )
     }
 
     @Provides
@@ -40,7 +42,9 @@ class ValidatorModule {
         return UiValidatorChain(
             empty,
             MinLengthValidator(
-                context.getString(R.string.invalid_min_length_error_message), minLength))
+                context.getString(R.string.invalid_min_length_error_message), minLength
+            )
+        )
     }
 
 }
