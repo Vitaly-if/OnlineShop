@@ -2,7 +2,7 @@ package com.example.onlineshop.login
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.example.onlineshop.core.Communication
+import com.example.core.presenter.Communication
 import com.example.onlineshop.signin.ui.UiState
 
 /**

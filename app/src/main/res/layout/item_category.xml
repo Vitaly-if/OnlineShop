@@ -8,7 +8,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical">
 
-    <com.example.onlineshop.signin.MyImageButton
+    <com.example.core.presenter.MyImageButton
         android:id="@+id/itemCategoryImageButton"
         android:layout_width="42dp"
         android:layout_height="wrap_content"
@@ -16,7 +16,7 @@
         android:background="@drawable/circle_category_background"
         android:src="@drawable/ic_phone" />
 
-    <com.example.onlineshop.signin.MyTextView
+    <com.example.core.presenter.MyTextView
         android:id="@+id/nameCategoryTextView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

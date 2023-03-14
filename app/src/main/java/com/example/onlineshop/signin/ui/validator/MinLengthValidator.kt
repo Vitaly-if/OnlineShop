@@ -1,6 +1,6 @@
 package com.example.onlineshop.signin.ui.validator
 
-import com.example.onlineshop.core.presenter.UiValidator
+import com.example.core.presenter.UiValidator
 
 /**
  * @author Vitaly.N on 04.03.2023.

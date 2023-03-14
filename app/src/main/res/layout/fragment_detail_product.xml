@@ -31,7 +31,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <com.example.onlineshop.signin.MyImageView
+        <com.example.core.presenter.MyImageView
             android:id="@+id/productImage"
             android:layout_width="328dp"
             android:layout_height="279dp"

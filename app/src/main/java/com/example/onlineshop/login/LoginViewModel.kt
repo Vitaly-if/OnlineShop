@@ -4,7 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.onlineshop.core.presenter.UiValidator
+import com.example.core.presenter.UiValidator
 import com.example.onlineshop.signin.domain.LoginIteractor
 import com.example.onlineshop.signin.domain.LoginResult
 import com.example.onlineshop.signin.ui.UiState

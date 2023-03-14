@@ -1,7 +1,7 @@
 package com.example.onlineshop.signin.ui
 
-import com.example.onlineshop.signin.CustomTextInputEditText
-import com.example.onlineshop.signin.CustomTextInputLayout
+import com.example.core.presenter.CustomTextInputEditText
+import com.example.core.presenter.CustomTextInputLayout
 
 /**
  * @author Vitaly.N on 04.03.2023.

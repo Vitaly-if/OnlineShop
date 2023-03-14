@@ -2,7 +2,7 @@ package com.example.onlineshop.signin
 
 import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
-import com.example.onlineshop.core.Communication
+import com.example.core.presenter.Communication
 import com.example.onlineshop.login.LoginSuccessCommunication
 import com.example.onlineshop.signin.ui.UiState
 
@@ -55,6 +55,6 @@ interface SignInStateCommunication : Communication.Mutable<UiState> {
     class Base : Communication.Ui<UiState>(), SignInStateCommunication
 }
 
-interface LoginSuccessCommunication : Communication.Mutable<Boolean> {
+interface SingInSuccessCommunication : Communication.Mutable<Boolean> {
     class Base : Communication.Ui<Boolean>(), LoginSuccessCommunication
 }

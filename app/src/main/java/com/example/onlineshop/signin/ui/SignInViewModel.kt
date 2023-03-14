@@ -4,8 +4,7 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.onlineshop.core.presenter.UiValidator
-import com.example.onlineshop.login.LoginSuccessCommunication
+import com.example.core.presenter.UiValidator
 import com.example.onlineshop.signin.domain.LoginIteractor
 import com.example.onlineshop.signin.domain.LoginResult
 import com.example.onlineshop.signin.ui.UiState
@@ -23,15 +22,15 @@ class SignInViewModel @Inject constructor(
 ) : ViewModel(), ObserveSingIn, ClearError, SignIn {
 
     private val communicationsFirstName = SignInCommunications.Base(
-        LoginSuccessCommunication.Base(),
+        SingInSuccessCommunication.Base(),
         SignInStateCommunication.Base()
     )
     private val communicationsLastName = SignInCommunications.Base(
-        LoginSuccessCommunication.Base(),
+        SingInSuccessCommunication.Base(),
         SignInStateCommunication.Base()
     )
     private val communicationsEmail = SignInCommunications.Base(
-        LoginSuccessCommunication.Base(),
+        SingInSuccessCommunication.Base(),
         SignInStateCommunication.Base()
     )
 

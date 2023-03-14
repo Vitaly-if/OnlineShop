@@ -15,7 +15,7 @@
         android:layout_marginStart="8dp"
         android:layout_marginTop="151dp"
         android:layout_marginEnd="8dp"
-        android:text="Sign in"
+        android:text="@string/sign_in"
         android:textAlignment="center"
         android:textColor="@color/black_600"
         android:textSize="26sp"
@@ -27,7 +27,7 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-    <com.example.onlineshop.signin.BaseCustomTextInputLayout
+    <com.example.core.presenter.BaseCustomTextInputLayout
         android:id="@+id/firstNameTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -48,20 +48,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/text_home">
 
-        <com.example.onlineshop.signin.BaseCustomTextInputEditText
+        <com.example.core.presenter.BaseCustomTextInputEditText
             android:id="@+id/firstNameEditText"
             android:layout_width="match_parent"
             android:layout_height="29dp"
             android:gravity="center"
-            android:hint="First name"
+            android:hint="@string/first_name"
             android:padding="0dp"
             android:textColorHint="@color/gray_400"
             android:textSize="11sp"
             app:fontFamily="@font/montserrat_medium"
-            app:hintAnimationEnabled="false"></com.example.onlineshop.signin.BaseCustomTextInputEditText>
-    </com.example.onlineshop.signin.BaseCustomTextInputLayout>
+            app:hintAnimationEnabled="false" />
+    </com.example.core.presenter.BaseCustomTextInputLayout>
 
-    <com.example.onlineshop.signin.BaseCustomTextInputLayout
+    <com.example.core.presenter.BaseCustomTextInputLayout
         android:id="@+id/lastNameTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -82,20 +82,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/firstNameTextInputLayout">
 
-        <com.example.onlineshop.signin.BaseCustomTextInputEditText
+        <com.example.core.presenter.BaseCustomTextInputEditText
             android:id="@+id/lastNameEditText"
             android:layout_width="match_parent"
             android:layout_height="29dp"
             android:gravity="center"
-            android:hint="Last name"
+            android:hint="@string/last_name"
             android:padding="0dp"
             android:textColorHint="@color/gray_400"
             android:textSize="11sp"
             app:fontFamily="@font/montserrat_medium"
             app:hintAnimationEnabled="false" />
-    </com.example.onlineshop.signin.BaseCustomTextInputLayout>
+    </com.example.core.presenter.BaseCustomTextInputLayout>
 
-    <com.example.onlineshop.signin.BaseCustomTextInputLayout
+    <com.example.core.presenter.BaseCustomTextInputLayout
         android:id="@+id/emailTextInputLayout"
         style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
         android:layout_width="match_parent"
@@ -116,18 +116,18 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/lastNameTextInputLayout">
 
-        <com.example.onlineshop.signin.BaseCustomTextInputEditText
+        <com.example.core.presenter.BaseCustomTextInputEditText
             android:id="@+id/emailEditText"
             android:layout_width="match_parent"
             android:layout_height="29dp"
             android:gravity="center"
-            android:hint="Email"
+            android:hint="@string/email"
             android:padding="0dp"
             android:textColorHint="@color/gray_400"
             android:textSize="11sp"
             app:fontFamily="@font/montserrat_medium"
             app:hintAnimationEnabled="false" />
-    </com.example.onlineshop.signin.BaseCustomTextInputLayout>
+    </com.example.core.presenter.BaseCustomTextInputLayout>
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/signInButton"
@@ -139,7 +139,7 @@
         android:backgroundTint="@color/purple_700"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="Sign in"
+        android:text="@string/sign_in"
         android:textAllCaps="false"
         android:textColor="@color/white_200"
         android:textSize="14sp"
@@ -168,7 +168,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:text="Already have an account?"
+            android:text="@string/already_have_an_account"
             android:textColor="@color/gray_500"
             android:textSize="10sp"
             app:fontFamily="@font/montserrat_medium" />
@@ -178,7 +178,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="8dp"
-            android:text="Log in"
+            android:text="@string/log_in"
             android:textColor="@color/purple_900"
             android:textSize="10sp"
             app:fontFamily="@font/montserrat_medium" />
@@ -202,14 +202,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            app:srcCompat="@drawable/ic_google_24"></ImageView>
+            app:srcCompat="@drawable/ic_google_24" />
 
         <TextView
             android:id="@+id/signInGoogleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:text="Sign in with Google"
+            android:text="@string/sign_in_with_google"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="12sp"
@@ -237,14 +237,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="10dp"
-            app:srcCompat="@drawable/ic_apple_24"></ImageView>
+            app:srcCompat="@drawable/ic_apple_24" />
 
         <TextView
             android:id="@+id/signInAppleText"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="5dp"
-            android:text="Sign in with Apple"
+            android:text="@string/sign_in_with_apple"
             android:textAlignment="center"
             android:textColor="@color/black"
             android:textSize="12sp"
