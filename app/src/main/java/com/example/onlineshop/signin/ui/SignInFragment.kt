@@ -45,24 +45,24 @@ class SignInFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.firstNameEditText.addTextChangedListener(watcher)
+        binding.firstNameSignInEditText.addTextChangedListener(watcher)
         binding.lastNameEditText.addTextChangedListener(watcher)
-        binding.emailEditText.addTextChangedListener(watcher)
+        binding.emailSignInEditText.addTextChangedListener(watcher)
         binding.logInText.setOnClickListener {
             findNavController(view).navigate(R.id.action_sign_in_user_to_login_user)
         }
         binding.signInButton.setOnClickListener {
-            viewModel.signIn(binding.firstNameEditText.text.toString(),
-                binding.lastNameEditText.text.toString(), binding.emailEditText.text.toString())
+            viewModel.signIn(binding.firstNameSignInEditText.text.toString(),
+                binding.lastNameEditText.text.toString(), binding.emailSignInEditText.text.toString())
         }
         viewModel.observeStateFirstName(this) {
-            it.apply(binding.firstNameTextInputLayout, binding.firstNameEditText)
+            it.apply(binding.firstNameTextInputLayout, binding.firstNameSignInEditText)
         }
         viewModel.observeStateLastName(this) {
             it.apply(binding.lastNameTextInputLayout, binding.lastNameEditText)
         }
         viewModel.observeStateEmail(this) {
-            it.apply(binding.emailTextInputLayout, binding.emailEditText)
+            it.apply(binding.emailSignInTextInputLayout, binding.emailSignInEditText)
         }
         viewModel.observeLoginSuccess(this) { success ->
             if (success)
