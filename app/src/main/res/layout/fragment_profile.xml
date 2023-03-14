@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="33dp"
         android:gravity="center"
-        android:text="Profile"
+        android:text="@string/profile"
         android:textColor="@color/black"
         android:textSize="15sp"
         app:fontFamily="@font/montserrat_bold"
@@ -52,7 +52,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="6dp"
         android:gravity="center"
-        android:text="Change photo"
+        android:text="@string/change_photo"
         android:textColor="@color/gray_500"
         android:textSize="8sp"
         app:fontFamily="@font/montserrat_medium"
@@ -66,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="17dp"
         android:gravity="center"
-        android:text="Satria Adhi Pradana"
+        android:text="@string/satria_adhi_pradana"
         android:textColor="@color/black_300"
         android:textSize="15sp"
         app:fontFamily="@font/montserrat_bold"
@@ -84,7 +84,7 @@
         android:backgroundTint="@color/purple_850"
         android:insetTop="0dp"
         android:insetBottom="0dp"
-        android:text="Upload item"
+        android:text="@string/upload_item"
         android:textAllCaps="false"
         android:textColor="@color/white_200"
         android:textSize="14sp"
@@ -95,7 +95,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/nameProfileTextView" />
-    <!--    Trade store layout-->
+
     <LinearLayout
         android:id="@+id/tradeStoreLinearLayout"
         android:layout_width="wrap_content"
@@ -111,9 +111,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_card"
-
-            />
+            android:src="@drawable/ic_card" />
 
         <TextView
             android:id="@+id/tradeStoneProfileTextView"
@@ -122,7 +120,7 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Trade store"
+            android:text="@string/trade_store"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
@@ -141,7 +139,7 @@
         android:src="@drawable/ic_left"
         app:layout_constraintBottom_toBottomOf="@+id/tradeStoreLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tradeStoreLinearLayout"></ImageButton>
+        app:layout_constraintTop_toTopOf="@+id/tradeStoreLinearLayout" />
 
     <!--    Payment method layout-->
     <LinearLayout
@@ -159,7 +157,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_card"/>
+            android:src="@drawable/ic_card" />
 
         <TextView
             android:id="@+id/paymentMethodTextView"
@@ -168,7 +166,7 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Payment method"
+            android:text="@string/payment_method"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
@@ -187,7 +185,7 @@
         android:src="@drawable/ic_left"
         app:layout_constraintBottom_toBottomOf="@+id/paymentMethodLinearLayout"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/paymentMethodLinearLayout"></ImageButton>
+        app:layout_constraintTop_toTopOf="@+id/paymentMethodLinearLayout" />
 
     <!--    Balance-->
     <LinearLayout
@@ -205,7 +203,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_card"/>
+            android:src="@drawable/ic_card" />
 
         <TextView
             android:id="@+id/balanceTextView"
@@ -214,7 +212,7 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Balance"
+            android:text="@string/balance"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
@@ -229,7 +227,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="end"
         android:layout_marginEnd="45dp"
-        android:text="$ 1593"
+        android:text="@string/text_sum"
         android:textColor="@color/black_300"
         android:textSize="14sp"
         app:fontFamily="@font/montserrat_medium"
@@ -237,7 +235,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/balanceLinearLayout" />
 
-    <!--    Trade history-->
+
     <LinearLayout
         android:id="@+id/tradeHistoryLinearLayout"
         android:layout_width="wrap_content"
@@ -253,7 +251,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_card"/>
+            android:src="@drawable/ic_card" />
 
         <TextView
             android:id="@+id/tradeHistoryTextView"
@@ -262,12 +260,10 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Trade history"
+            android:text="@string/trade_history"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
-
-        />
 
     </LinearLayout>
 
@@ -283,7 +279,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/tradeHistoryLinearLayout" />
 
-    <!--    Restore Purchase-->
     <LinearLayout
         android:id="@+id/restorePurchaseLinearLayout"
         android:layout_width="wrap_content"
@@ -299,7 +294,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_update"/>
+            android:src="@drawable/ic_update" />
 
         <TextView
             android:id="@+id/restorePurchaseTextView"
@@ -308,12 +303,10 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Restore Purchase"
+            android:text="@string/restore_purchase"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
-
-        />
 
     </LinearLayout>
 
@@ -329,7 +322,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="@+id/restorePurchaseLinearLayout" />
 
-    <!--    Help-->
     <LinearLayout
         android:id="@+id/helpLinearLayout"
         android:layout_width="wrap_content"
@@ -345,7 +337,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_help"/>
+            android:src="@drawable/ic_help" />
 
         <TextView
             android:id="@+id/helpTextView"
@@ -354,14 +346,13 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Help"
+            android:text="@string/help"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
 
     </LinearLayout>
 
-    <!--    Log out-->
     <LinearLayout
         android:id="@+id/logOutLinearLayout"
         android:layout_width="wrap_content"
@@ -377,7 +368,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/circle_40"
-            android:src="@drawable/ic_logout"/>
+            android:src="@drawable/ic_logout" />
 
         <TextView
             android:id="@+id/logOutTextView"
@@ -386,7 +377,7 @@
             android:layout_gravity="start"
             android:layout_marginStart="6dp"
             android:gravity="center"
-            android:text="Log out"
+            android:text="@string/log_out"
             android:textColor="@color/black_300"
             android:textSize="14sp"
             app:fontFamily="@font/montserrat_medium" />
