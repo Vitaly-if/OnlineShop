@@ -19,24 +19,13 @@ class SignInViewModel @Inject constructor(
     private val iterator: LoginIteractor,
     @Named("Email") private val validatorEmail: UiValidator,
     @Named("Login") private val validatorLogin: UiValidator,
+    @Named("CommunicationFirstName") private val communicationsFirstName: SignInCommunications,
+    @Named("CommunicationLastName") private val communicationsLastName: SignInCommunications,
+    @Named("CommunicationEmail") private val communicationsEmail: SignInCommunications,
 ) : ViewModel(), ObserveSingIn, ClearError, SignIn {
-
-    private val communicationsFirstName = SignInCommunications.Base(
-        SingInSuccessCommunication.Base(),
-        SignInStateCommunication.Base()
-    )
-    private val communicationsLastName = SignInCommunications.Base(
-        SingInSuccessCommunication.Base(),
-        SignInStateCommunication.Base()
-    )
-    private val communicationsEmail = SignInCommunications.Base(
-        SingInSuccessCommunication.Base(),
-        SignInStateCommunication.Base()
-    )
 
     override fun observeLoginSuccess(owner: LifecycleOwner, observer: Observer<Boolean>) {
         communicationsFirstName.observeLoginSuccess(owner, observer)
-
     }
 
     override fun observeStateFirstName(owner: LifecycleOwner, observer: Observer<UiState>) {

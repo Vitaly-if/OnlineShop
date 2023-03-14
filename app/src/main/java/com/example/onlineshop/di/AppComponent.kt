@@ -14,11 +14,14 @@ import javax.inject.Scope
 /**
  * @author Vitaly.N on 05.03.2023.
  */
-@[AppScope Component(modules = [AppModule::class, ContextModule::class, LoginDataBaseModule::class, LoginCacheDataSourceModule::class,
+@[AppScope Component(
+    modules = [AppModule::class, ContextModule::class, LoginDataBaseModule::class,
+        LoginCacheDataSourceModule::class, CommunicationsSignIn::class,
         LoginRepositoryModule::class, LoginIteractorModule::class, ValidatorModule::class,
         LatestCloudDataSourceModule::class, LatestRepositoryModule::class, FlashSaleCloudDataSourceModule::class,
         FlashSaleRepositoryModule::class, ProductIteractorModule::class, ProductDetailCloudDataSourceModule::class,
-        ProductDetailRepositoryModule::class, ProductDetailIteractorModule::class])]
+        ProductDetailRepositoryModule::class, ProductDetailIteractorModule::class]
+)]
 
 interface AppComponent {
     fun inject(activity: MainActivity)
@@ -26,6 +29,7 @@ interface AppComponent {
     fun inject(fragment: LoginFragment)
     fun inject(fragment: HomeFragment)
     fun inject(fragment: DetailProductFragment)
+
     @Component.Builder
     interface Builder {
 
@@ -35,5 +39,6 @@ interface AppComponent {
         fun build(): AppComponent
     }
 }
+
 @Scope
 annotation class AppScope
