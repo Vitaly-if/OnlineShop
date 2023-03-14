@@ -18,16 +18,9 @@ import javax.inject.Named
 class LoginViewModel @Inject constructor(
     private val iterator: LoginIteractor,
     @Named("Login") private val validatorLogin: UiValidator,
-) : ViewModel(), ObserveLogin, ClearError, Login {
-
-    private val communicationsFirstName = LoginCommunications.Base(
-        LoginSuccessCommunication.Base(),
-        LoginStateCommunication.Base()
-    )
-    private val communicationsPassword = LoginCommunications.Base(
-        LoginSuccessCommunication.Base(),
-        LoginStateCommunication.Base()
-    )
+    private val communicationsFirstName: LoginCommunications,
+    private val communicationsPassword: LoginCommunications
+    ) : ViewModel(), ObserveLogin, ClearError, Login {
 
     override fun observeLoginSuccess(owner: LifecycleOwner, observer: Observer<Boolean>) {
         communicationsFirstName.observeLoginSuccess(owner, observer)

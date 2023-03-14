@@ -16,10 +16,10 @@ import javax.inject.Scope
  */
 @[AppScope Component(
     modules = [AppModule::class, ContextModule::class, LoginDataBaseModule::class,
-        LoginCacheDataSourceModule::class, CommunicationsSignIn::class,
-        LoginRepositoryModule::class, LoginIteractorModule::class, ValidatorModule::class,
+        LoginCacheDataSourceModule::class, CommunicationsSignIn::class, CommunicationsLoginModule::class,
+        LoginRepositoryModule::class, LoginIteractorModule::class, ValidatorModule::class, CommunicationsHomeModule::class,
         LatestCloudDataSourceModule::class, LatestRepositoryModule::class, FlashSaleCloudDataSourceModule::class,
-        FlashSaleRepositoryModule::class, ProductIteractorModule::class, ProductDetailCloudDataSourceModule::class,
+        FlashSaleRepositoryModule::class, CommunicationsDetailProductModule::class, ProductIteractorModule::class, ProductDetailCloudDataSourceModule::class,
         ProductDetailRepositoryModule::class, ProductDetailIteractorModule::class]
 )]
 

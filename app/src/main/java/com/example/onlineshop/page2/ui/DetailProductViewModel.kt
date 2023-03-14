@@ -8,22 +8,23 @@ import com.example.onlineshop.page2.domain.ProductDetailIteractor
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class DetailProductViewModel @Inject constructor(iteractor: ProductDetailIteractor): ViewModel(),
-ObserveProductDetail{
+class DetailProductViewModel @Inject constructor(
+    iteractor: ProductDetailIteractor,
+    private val detailProductUiMapper: DetailProductUiMapper,
+    private val communications: ProductDetailCommunications,
+) : ViewModel(),
+    ObserveProductDetail {
 
-    val detailProductUiMapper = DetailProductUiMapper()
-    val communications = ProductDetailCommunications.Base(
-        ImagesProductListCommunication.Base(),
-        ColorsProductListCommunication.Base(),
-        ProductDetailUiCommunication.Base())
     init {
         viewModelScope.launch {
             communications.showCard(iteractor.fetchProductDetail().map(detailProductUiMapper))
         }
     }
+
     override fun observeImageList(owner: LifecycleOwner, observer: Observer<List<String>>) {
-        communications.observeImageList(owner,observer)
+        communications.observeImageList(owner, observer)
     }
+
     override fun observeColorList(owner: LifecycleOwner, observer: Observer<List<String>>) {
         communications.observeColorList(owner, observer)
     }

@@ -7,13 +7,11 @@ import com.example.onlineshop.page1.ui.*
 import kotlinx.coroutines.launch
 import javax.inject.Inject
 
-class HomeViewModel @Inject constructor(private val iteractor: ProductIteractor) : ViewModel(),
+class HomeViewModel @Inject constructor(
+    private val iteractor: ProductIteractor,
+    private val communications: HomeCommunications,
+) : ViewModel(),
     ObserveHome {
-
-    private val communications = HomeCommunications.Base(
-        LatestListCommunication.Base(),
-        FlashSaleListCommunication.Base()
-    )
 
     init {
         viewModelScope.launch {
@@ -23,6 +21,7 @@ class HomeViewModel @Inject constructor(private val iteractor: ProductIteractor)
             communications.showFlashSale(productResult.fetchFlashSales())
         }
     }
+
     fun observeflashSasleNavigation(owner: LifecycleOwner, observer: Observer<Int>) =
         iteractor.fetchFlashSaleNavigatator().observe(owner, observer)
 
