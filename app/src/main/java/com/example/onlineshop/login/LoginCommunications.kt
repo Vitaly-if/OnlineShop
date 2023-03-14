@@ -45,9 +45,9 @@ interface ObserveLogin {
     fun observeStatePassword(owner: LifecycleOwner, observer: Observer<UiState>)
 }
 
-interface LoginStateCommunication : com.example.core.presenter.Communication.Mutable<UiState> {
-    class Base : com.example.core.presenter.Communication.Ui<UiState>(), LoginStateCommunication
+interface LoginStateCommunication : Communication.Mutable<UiState> {
+    class Base : Communication.Ui<UiState>(), LoginStateCommunication
 }
-interface LoginSuccessCommunication: com.example.core.presenter.Communication.Mutable<Boolean> {
-    class Base : com.example.core.presenter.Communication.Ui<Boolean>(), LoginSuccessCommunication
+interface LoginSuccessCommunication: Communication.Mutable<Boolean> {
+    class Base : Communication.Ui<Boolean>(), LoginSuccessCommunication
 }

@@ -1,10 +1,10 @@
 package com.example.onlineshop.di
 
 import android.app.Application
-import android.content.Context
 import com.example.onlineshop.MainActivity
-import com.example.onlineshop.detail.ui.DetailProductFragment
-import com.example.onlineshop.home.HomeFragment
+import com.example.onlineshop.di.modules.*
+import com.example.onlineshop.page2.ui.DetailProductFragment
+import com.example.onlineshop.page1.HomeFragment
 import com.example.onlineshop.login.LoginFragment
 import com.example.onlineshop.signin.ui.SignInFragment
 import dagger.BindsInstance
@@ -34,15 +34,6 @@ interface AppComponent {
 
         fun build(): AppComponent
     }
-
-
-
-
-//    @Component.Factory
-//    interface AppComponentFactory {
-//        fun create(@BindsInstance context: Context): AppComponent
-//    }
-
 }
 @Scope
 annotation class AppScope

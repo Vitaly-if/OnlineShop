@@ -12,16 +12,4 @@ open class App: Application() {
             .application(this)
             .build()
     }
-
-    override fun onCreate() {
-        super.onCreate()
-        //ArticlesDepsStore.deps = appComponent
-    }
-
-//    lateinit var appComponent: AppComponent
-//
-//    override fun onCreate() {
-//        super.onCreate()
-//        appComponent = DaggerAppComponent.factory().create(this)
-//    }
 }

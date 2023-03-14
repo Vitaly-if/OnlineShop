@@ -17,7 +17,7 @@ import javax.inject.Named
  */
 class LoginViewModel @Inject constructor(
     private val iterator: LoginIteractor,
-    @Named("Login") private val validatorLogin: com.example.core.presenter.UiValidator,
+    @Named("Login") private val validatorLogin: UiValidator,
 ) : ViewModel(), ObserveLogin, ClearError, Login {
 
     private val communicationsFirstName = LoginCommunications.Base(

@@ -5,8 +5,7 @@ import com.example.core.presenter.UiValidator
 /**
  * @author Vitaly.N on 06.03.2023.
  */
-class EmailValidator(private val errorMessage: String) :
-    com.example.core.presenter.UiValidator {
+class EmailValidator(private val errorMessage: String) : UiValidator {
 
     override fun errorMessage(): String {
         return errorMessage

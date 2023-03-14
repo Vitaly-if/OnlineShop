@@ -8,7 +8,7 @@ import com.example.core.presenter.UiValidator
 open class MinLengthValidator(
     errorMessage: String,
     private val minLength: Int
-) : com.example.core.presenter.UiValidator.Abstract(errorMessage) {
+) : UiValidator.Abstract(errorMessage) {
 
     override fun isValid(text: String): Boolean {
         return text.length >= minLength

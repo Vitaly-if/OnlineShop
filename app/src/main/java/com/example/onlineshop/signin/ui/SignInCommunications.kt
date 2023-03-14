@@ -51,10 +51,10 @@ interface ObserveSingIn {
     fun observeStateEmail(owner: LifecycleOwner, observer: Observer<UiState>)
 }
 
-interface SignInStateCommunication : com.example.core.presenter.Communication.Mutable<UiState> {
-    class Base : com.example.core.presenter.Communication.Ui<UiState>(), SignInStateCommunication
+interface SignInStateCommunication : Communication.Mutable<UiState> {
+    class Base : Communication.Ui<UiState>(), SignInStateCommunication
 }
 
-interface LoginSuccessCommunication : com.example.core.presenter.Communication.Mutable<Boolean> {
-    class Base : com.example.core.presenter.Communication.Ui<Boolean>(), LoginSuccessCommunication
+interface SingInSuccessCommunication : Communication.Mutable<Boolean> {
+    class Base : Communication.Ui<Boolean>(), LoginSuccessCommunication
 }

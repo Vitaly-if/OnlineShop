@@ -9,15 +9,15 @@ import com.example.core.presenter.CustomTextInputLayout
 sealed class UiState {
 
     abstract fun apply(
-        inputLayout: com.example.core.presenter.CustomTextInputLayout,
-        textInputEditText: com.example.core.presenter.CustomTextInputEditText,
+        inputLayout: CustomTextInputLayout,
+        textInputEditText: CustomTextInputEditText,
     )
 
     class Success : UiState() {
 
         override fun apply(
-            inputLayout: com.example.core.presenter.CustomTextInputLayout,
-            textInputEditText: com.example.core.presenter.CustomTextInputEditText,
+            inputLayout: CustomTextInputLayout,
+            textInputEditText: CustomTextInputEditText,
         ) = textInputEditText.showText("")
     }
 
@@ -27,8 +27,8 @@ sealed class UiState {
     ) : UiState() {
 
         override fun apply(
-            inputLayout: com.example.core.presenter.CustomTextInputLayout,
-            textInputEditText: com.example.core.presenter.CustomTextInputEditText,
+            inputLayout: CustomTextInputLayout,
+            textInputEditText: CustomTextInputEditText,
         ) = with(inputLayout) {
             changeErrorEnabled(errorEnabled)
             showError(message)
